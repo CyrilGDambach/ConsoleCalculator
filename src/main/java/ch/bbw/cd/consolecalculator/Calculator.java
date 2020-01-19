@@ -6,6 +6,6 @@ public class Calculator {
 	}
 	
 	public int differenz(int v1, int v2) {
-		return 0;
+		return v1 - v2;
 	}
 }
