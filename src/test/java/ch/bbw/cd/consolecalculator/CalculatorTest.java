@@ -120,4 +120,8 @@ public class CalculatorTest {
 		assertTrue(testee.divide(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
 	}
 
+	@Test
+	public void testDivisionMinvalueIsNOk() {
+		assertTrue(testee.divide(Integer.MIN_VALUE-1, 1) == Integer.MIN_VALUE-1);
+	}
 }
