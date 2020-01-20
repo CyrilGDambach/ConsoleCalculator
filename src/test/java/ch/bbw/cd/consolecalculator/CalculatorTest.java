@@ -69,5 +69,11 @@ public class CalculatorTest {
 	public void testDifferenzZeroIsOk() {
 		assertTrue(testee.differenz(0, 0) == 0);
 	}
+	
+	@Test
+	public void testDifferenzMaxvalueIsOk() {
+		assertTrue(testee.differenz(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+
 
 }
