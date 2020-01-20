@@ -75,5 +75,9 @@ public class CalculatorTest {
 		assertTrue(testee.differenz(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
 	}
 
+	@Test(expected = ArithmeticException.class)
+	public void testDifferenzMaxvalueIsNOk() {
+		testee.differenz(Integer.MAX_VALUE, -1);
+	}
 
 }
