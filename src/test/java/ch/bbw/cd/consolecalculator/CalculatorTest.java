@@ -43,6 +43,11 @@ public class CalculatorTest {
 	public void testSummeMinvalueIsOk() {
 		assertTrue(testee.summe(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
 	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testSummeMinvalueIsNOk() {
+		testee.summe(Integer.MIN_VALUE, -1);
+	}
 	/*Tests for method Differenz*/
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
