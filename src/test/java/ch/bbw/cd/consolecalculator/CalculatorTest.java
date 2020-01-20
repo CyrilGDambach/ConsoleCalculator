@@ -38,6 +38,11 @@ public class CalculatorTest {
 	public void testSummeMaxvalueIsNOk() {
 		testee.summe(Integer.MAX_VALUE, 1);
 	}
+
+	@Test
+	public void testSummeMinvalueIsOk() {
+		assertTrue(testee.summe(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
+	}
 	/*Tests for method Differenz*/
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
