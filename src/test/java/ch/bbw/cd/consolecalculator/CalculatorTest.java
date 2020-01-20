@@ -23,6 +23,11 @@ public class CalculatorTest {
 	public void testSummeEinPositivEinNegativIsOk() {
 		assertTrue(testee.summe(-3, 10) == 7);
 	}
+	
+	@Test
+	public void testSummeZeroIsOk() {
+		assertTrue(testee.summe(0, 0) == 0);
+	}
 	/*Tests for method Differenz*/
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
