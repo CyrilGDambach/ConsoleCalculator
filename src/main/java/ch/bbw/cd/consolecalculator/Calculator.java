@@ -11,6 +11,11 @@ public class Calculator {
 	}
 
 	public int differenz(int v1, int v2) {
+		long result = (long) v1 - (long) v2;
+		
+		if (result < Integer.MIN_VALUE || result > Integer.MAX_VALUE) {
+			throw new ArithmeticException();
+		}
 		return v1 - v2;
 	}
 }

@@ -54,5 +54,42 @@ public class CalculatorTest {
 		testee = new Calculator();
 		assertTrue(testee.differenz(25,10) == 15);
 	}
+	
+	@Test
+	public void testDifferenzZweiNegativeIsOk() {
+		assertTrue(testee.differenz(-5, -10) == 15);
+	}
+	
+	@Test
+	public void testDifferenzEinPositivEinNegativIsOk() {
+		assertTrue(testee.differenz(-5, 10) == -15);
+	}
+	
+	@Test
+	public void testDifferenzZeroIsOk() {
+		assertTrue(testee.differenz(0, 0) == 0);
+	}
+	
+	@Test
+	public void testDifferenzMaxvalueIsOk() {
+		assertTrue(testee.differenz(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testDifferenzMaxvalueIsNOk() {
+		testee.differenz(Integer.MAX_VALUE, -1);
+	}
+
+	@Test
+	public void testDifferenzMinvalueIsOk() {
+		assertTrue(testee.differenz(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
+	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testDifferenzMinvalueIsNOk() {
+		testee.differenz(Integer.MIN_VALUE, 1);
+	}
+	/*Tests for method Division*/
+
 
 }
