@@ -80,4 +80,8 @@ public class CalculatorTest {
 		testee.differenz(Integer.MAX_VALUE, -1);
 	}
 
+	@Test
+	public void testDifferenzMinvalueIsOk() {
+		assertTrue(testee.differenz(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
+	}
 }
