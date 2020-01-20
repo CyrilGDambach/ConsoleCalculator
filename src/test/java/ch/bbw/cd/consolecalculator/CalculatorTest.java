@@ -124,4 +124,9 @@ public class CalculatorTest {
 	public void testDivisionMinvalueIsNOk() {
 		assertTrue(testee.divide(Integer.MIN_VALUE-1, 1) == Integer.MIN_VALUE-1);
 	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testDivisionDivisorIsZeroIsNOk() {
+		testee.divide(10, 0);
+	}
 }
