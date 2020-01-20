@@ -28,6 +28,11 @@ public class CalculatorTest {
 	public void testSummeZeroIsOk() {
 		assertTrue(testee.summe(0, 0) == 0);
 	}
+	
+	@Test
+	public void testSummeMaxvalueIsOk() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
 	/*Tests for method Differenz*/
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
