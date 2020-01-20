@@ -22,4 +22,21 @@ public class Calculator {
 	public int multiply(int faktor1, int faktor2) {
 		return faktor1 * faktor2;
 	}
+	
+	public int divide(int dividend, int divisor) {
+		
+		long result = (long) dividend / (long) divisor;
+		
+		
+		if (result < Integer.MIN_VALUE || result > Integer.MAX_VALUE) {
+			System.out.println("invalid result");
+			throw new ArithmeticException();
+		}
+		
+		if (divisor == 0) {
+			throw new ArithmeticException();
+		}
+		return dividend / divisor;
+	}
+
 }

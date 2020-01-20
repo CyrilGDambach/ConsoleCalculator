@@ -90,6 +90,9 @@ public class CalculatorTest {
 		testee.differenz(Integer.MIN_VALUE, 1);
 	}
 	/*Tests for method Division*/
-
+	@Test
+	public void test_divide_zweiPositive_OK() {
+		assertTrue(testee.divide(10, 2) == 5);
+	}
 
 }
