@@ -99,6 +99,10 @@ public class CalculatorTest {
 	public void testDivisionZweiNegativeIsOk() {
 		assertTrue(testee.divide(-10, -2) == 5);
 	}
-
+	
+	@Test
+	public void testDivisionEinPositivEinNegativIsOk() {
+		assertTrue(testee.divide(10, -2) == -5);
+	}
 
 }
