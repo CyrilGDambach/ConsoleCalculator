@@ -84,4 +84,10 @@ public class CalculatorTest {
 	public void testDifferenzMinvalueIsOk() {
 		assertTrue(testee.differenz(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
 	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testDifferenzMinvalueIsNOk() {
+		testee.differenz(Integer.MIN_VALUE, 1);
+	}
+
 }
