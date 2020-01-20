@@ -15,13 +15,17 @@ public class CalculatorTest {
 	}	
 
 	@Test
-	public void test_summe_zweiNegative_OK() {
+	public void testSummeZweiNegativeIsOk() {
 		assertTrue(testee.summe(-3, -10) == -13);
 	}
 	
+	@Test
+	public void testSummeEinPositivEinNegativIsOk() {
+		assertTrue(testee.summe(-3, 10) == 7);
+	}
 	/*Tests for method Differenz*/
 	@Test
-	public void testSubtractionZweiPositiveIsOk() {
+	public void testDifferenzZweiPositiveIsOk() {
 		testee = new Calculator();
 		assertTrue(testee.differenz(25,10) == 15);
 	}
