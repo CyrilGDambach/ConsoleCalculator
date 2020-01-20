@@ -114,5 +114,10 @@ public class CalculatorTest {
 	public void testDivisionMaxvalueIsNOk() {
 		assertTrue(testee.divide(Integer.MAX_VALUE+1, 1) == Integer.MAX_VALUE+1);
 	}
+	
+	@Test
+	public void testDivisionMinvalueIsOk() {
+		assertTrue(testee.divide(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
+	}
 
 }
