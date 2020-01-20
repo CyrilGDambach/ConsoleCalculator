@@ -33,6 +33,11 @@ public class CalculatorTest {
 	public void testSummeMaxvalueIsOk() {
 		assertTrue(testee.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
 	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testSummeMaxvalueIsNOk() {
+		testee.summe(Integer.MAX_VALUE, 1);
+	}
 	/*Tests for method Differenz*/
 	@Test
 	public void testDifferenzZweiPositiveIsOk() {
