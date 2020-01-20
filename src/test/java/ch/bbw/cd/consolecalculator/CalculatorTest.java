@@ -59,5 +59,10 @@ public class CalculatorTest {
 	public void testDifferenzZweiNegativeIsOk() {
 		assertTrue(testee.differenz(-5, -10) == 15);
 	}
+	
+	@Test
+	public void testDifferenzEinPositivEinNegativIsOk() {
+		assertTrue(testee.differenz(-5, 10) == -15);
+	}
 
 }
