@@ -89,5 +89,7 @@ public class CalculatorTest {
 	public void testDifferenzMinvalueIsNOk() {
 		testee.differenz(Integer.MIN_VALUE, 1);
 	}
+	/*Tests for method Division*/
+
 
 }
