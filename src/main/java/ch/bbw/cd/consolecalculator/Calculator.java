@@ -18,4 +18,8 @@ public class Calculator {
 		}
 		return v1 - v2;
 	}
+	
+	public int multiply(int faktor1, int faktor2) {
+		return faktor1 * faktor2;
+	}
 }
