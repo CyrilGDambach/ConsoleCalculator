@@ -91,8 +91,14 @@ public class CalculatorTest {
 	}
 	/*Tests for method Division*/
 	@Test
-	public void test_divide_zweiPositive_OK() {
+	public void testDivisionZweiPositiveIsOk() {
 		assertTrue(testee.divide(10, 2) == 5);
 	}
+
+	@Test
+	public void testDivisionZweiNegativeIsOk() {
+		assertTrue(testee.divide(-10, -2) == 5);
+	}
+
 
 }
